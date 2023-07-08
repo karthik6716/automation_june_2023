@@ -29,7 +29,10 @@ terraform {
 }
 
 provider "aws" {
-  region     = "us-east-1"
-  access_key = "AKIAQQPRT4S3KK23FCRV"
-  secret_key = "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"
+  region = "us-east-1"
+  assume_role {
+    role_arn     = "arn:aws:iam::035403326646:role/sts-assume-role"
+    session_name = "terraform-token"
+  }
+
 }
