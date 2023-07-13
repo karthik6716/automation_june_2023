@@ -12,11 +12,10 @@ terraform {
   }
 
   backend "s3" {
+    role_arn     = "arn:aws:iam::035403326646:role/sts-assume-role"
     bucket         = "obl-1st-bucket"
     key            = "my-terraform-backendfiles"
     region         = "us-east-1"
-    access_key     = "AKIAQQPRT4S3KK23FCRV"
-    secret_key     = "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"
     dynamodb_table = "terraform-statefiles-table"
   }
 

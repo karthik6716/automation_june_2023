@@ -63,6 +63,14 @@ variable "bastion_host_name" {
   type        = string
 }
 
+variable "key_pair" {
+  description = "key pair created to ssh into instances"
+  type        = string
+}
+
+
+
+
 # variable "inbound_rules_web" {
 #   description = "ingress rules for security groups for web servers"
 #   type = list(object({
