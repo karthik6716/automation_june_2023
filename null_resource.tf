@@ -18,15 +18,15 @@ resource "null_resource" "provisioner" {
     destination = "/home/ec2-user/key-pair"
   }
 
-#   # provisioner "local-exec" {
-#   #   command = "scp -o StrictHostKeyChecking=no -i ~/automation_june_2023/key-pair ~/automation_june_2023/key-pair ec2-user@${aws_instance.bastion.public_ip}:~"
-#   #   # provisionner is use as last resort --- privilege manual ssh procedure
-#   # }
+  #   # provisioner "local-exec" {
+  #   #   command = "scp -o StrictHostKeyChecking=no -i ~/automation_june_2023/key-pair ~/automation_june_2023/key-pair ec2-user@${aws_instance.bastion.public_ip}:~"
+  #   #   # provisionner is use as last resort --- privilege manual ssh procedure
+  #   # }
 
-#   provisioner "remote-exec" {
-#     inline = [
-#       "chmod 400 key-pair"
-#     ]
-#   }
+  #   provisioner "remote-exec" {
+  #     inline = [
+  #       "chmod 400 key-pair"
+  #     ]
+  #   }
 
 }
