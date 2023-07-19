@@ -68,6 +68,24 @@ variable "key_pair" {
   type        = string
 }
 
+variable "key_name" {
+  description = "key_pair name for instances"
+  type        = string
+  default     = "mykey"
+}
+
+variable "db_user_name" {
+  description = "user name for db"
+  type        = string
+  sensitive   = true
+}
+
+variable "db_password" {
+  description = "password for db instance to connect"
+  type        = string
+  sensitive   = true
+}
+
 
 
 
@@ -91,10 +109,5 @@ variable "key_pair" {
 #   }]
 # }
 
-variable "key_name" {
-  description = "key_pair name for instances"
-  type        = string
-  default     = "mykey"
-}
 
 
